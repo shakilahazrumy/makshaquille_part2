@@ -4,53 +4,13 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+     <?php
+            include 'nav.inc';
+        ?> 
 <head>
     <meta charset="UTF-8">
     <title>CSS Enhancements Showcase</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #46767E;
-            color: #EBC4BB;
-            text-align: center;
-            padding: 30px 0;
-        }
-        section {
-            background-color: #ffffff;
-            margin: 30px auto;
-            padding: 20px 30px;
-            max-width: 800px;
-            border-left: 5px solid #46767E;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #46767E;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        code {
-            display: block;
-            background: #f0f0f0;
-            border-left: 4px solid #EBC4BB;
-            padding: 10px;
-            margin: 10px 0;
-            white-space: pre-wrap;
-            font-family: Consolas, monospace;
-        }
-        footer {
-            text-align: center;
-            background-color: #46767E;
-            color: #EBC4BB;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/enhancements.css">
 </head>
 <body>
 
