@@ -1,5 +1,4 @@
-<?php include('header.inc'); 
-
+<?php
 // enhancements.php
 ?>
 <!DOCTYPE html>
@@ -71,11 +70,37 @@ $enhancements = [
         "title" => "2. Header and Navigation Styling",
         "description" => "Applies color schemes and alignment to the header and makes hyperlinks interactive with hover effects.",
         "code" => "#header {\n    text-align: right;\n    color: #EBC4BB;\n    background-color: #46767E;\n}\na:hover {\n    color: #46767E;\n    background-color: #EBC4BB;\n}"
-
     ],
-    
-
-    
+    [
+        "title" => "3. Flexbox for Centering",
+        "description" => "Uses Flexbox to horizontally and vertically center items within a container.",
+        "code" => ".display {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+    ],
+    [
+        "title" => "4. Grid Layout for Forms",
+        "description" => "Uses CSS Grid to organize form elements into two equal columns with consistent spacing.",
+        "code" => ".container {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 1em;\n}\n.span-columns {\n    grid-column: span 2;\n}"
+    ],
+    [
+        "title" => "5. Visual Hierarchy with Typography",
+        "description" => "Color-codes headings and applies unique styling to the first line of certain text blocks for emphasis.",
+        "code" => "h1, h2 {\n    color: #46767E;\n}\n.group-info::first-line {\n    background-color: #EBC4BB;\n    color: #46767E;\n}"
+    ],
+    [
+        "title" => "6. Table Styling",
+        "description" => "Improves readability of tables using borders, padding, and highlighted headers with strong contrast.",
+        "code" => "table, th, td {\n    border: solid #234247;\n    padding: 2px;\n}\nth {\n    background-color: #EBC4BB;\n    color: #46767E;\n}"
+    ],
+    [
+        "title" => "7. Buttons and Hover Effects",
+        "description" => "Styles buttons with a consistent look and uses hover states to visually indicate interactivity.",
+        "code" => ".action {\n    background-color: #EBC4BB;\n    color: #46767E;\n}\n.action:hover {\n    background-color: #46767E;\n    color: #EBC4BB;\n}"
+    ],
+    [
+        "title" => "8. Content Block Styling",
+        "description" => "Uses padding, borders, and background images to visually distinguish content sections.",
+        "code" => ".our-history {\n    width: 45%;\n    float: left;\n    padding: 20px;\n    border: solid #46767E;\n    background-image: url(\"../styles/images/wallpaper.jpeg\");\n}"
+    ]
 ];
 
 // Output each enhancement as a section
@@ -94,5 +119,3 @@ foreach ($enhancements as $enhancement) {
 
 </body>
 </html>
-
-<?php include('footer.inc'); ?>
