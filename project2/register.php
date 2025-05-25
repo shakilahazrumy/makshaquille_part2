@@ -49,6 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Manager Registration</title>
     <link rel="stylesheet" href="login.css"> 
 </head>
+<?php
+                include 'nav.inc';
+             ?>   
 
 <body class="bg-light">
 <div class="container">

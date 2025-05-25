@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">  
-
-<?php
-    include 'header.inc';
-?>
-
-<body>  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Home</title>  
+    <link rel="stylesheet" type="text/css" href="../styles/about.css"> <!-- Link to your CSS stylesheet -->  
+</head> 
+<body>
     <header>   
-        <?php
-            include 'nav.inc';
-        ?> 
+        <p>We would like to acknowledge that the logo used and the background picture used  in this page 
+            was created by ChatGPT</p>  
+            <?php
+                include 'nav.inc';
+             ?>   
     </header>  
 
 

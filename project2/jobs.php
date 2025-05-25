@@ -12,15 +12,9 @@
     <header> 
       <p>We would like to acknowledge that the logo, key responsibilities, and qualifications used in this page 
         was created and assisted by ChatGPT</p>  
-        <nav>  
-          <a href="index.html"><img src="../images/logo.jpg" id="logo" alt="melbourne possums logo"></a>
-          <ul id="header">  
-              <li><a href="../project1/index.html" class="directory">Home</a></li>  
-              <li><a href="../project1/jobs.html" class="directory">Job Opportunities</a></li> 
-              <li><a href="../project1/about.html" class="directory">About</a></li>  
-              <li><a href="../project1/apply.html" class="directory">Apply</a></li>  
-          </ul>  
-      </nav>   
+        <?php
+                include 'nav.inc';
+             ?>    
     </header>  
 
     <!--Cloud Engineer position-->
