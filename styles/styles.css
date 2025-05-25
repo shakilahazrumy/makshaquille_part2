@@ -1,0 +1,205 @@
+/* 
+	Author: Shakila Fitriannisa Hazrumy
+	Purpose: the purpose of this css file is to structure and design the presentation 
+	of the HTML document that will be submitted for the Project1 assignment for Web Technology
+	Semester 1 2025 by group Mak_Shaquille
+*/
+/* applies to the whole page */
+body, html{
+	padding: 0;
+	margin: 0;
+}
+*{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* Header and navigation css */
+
+header{
+	text-align: center;
+}
+.name{
+	padding: 12px;
+}
+#header{
+	text-align: right;
+	padding-right: 0.5%;
+	list-style-type: none;
+	padding-top: 15px;
+	padding-bottom: 8px;
+	line-height: 1.8;
+	color: #EBC4BB;
+	background-color: #46767E;
+  }
+#logo{
+	width: 125px;
+	float: left;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+a:hover{
+	color: #46767E;
+	background-color: #EBC4BB;
+}
+body, html, h1, h2{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* Body CSS properties*/
+aside{
+	width: 25%;
+	float: right;
+	padding: 20px;
+	border: solid #46767E;
+	box-sizing: content-box;
+	text-align: center;
+}
+h1, h2{
+	color: #46767E;
+}
+section{
+	color: #234247;
+}
+#page-title{
+	text-align: center;
+	line-height: 80px;
+}
+#ack-of-land{
+	text-align: center;
+	width: 50%;
+	padding: 20px;
+	margin: auto;
+	border: solid #46767E;
+	box-sizing: content-box;
+	padding-bottom: 20px;
+}
+.job-title{
+	background-color: #EBC4BB;
+	padding: 12px;
+	margin: 0;
+}
+.job-details{
+	padding: 20px;
+}
+h3{
+	padding-left: 20px;
+}
+.key-details{
+	line-height: 25px;
+	padding-left: 20px;
+	padding-top: 0px;
+}
+footer{
+	background-color: #46767E;
+	color: #EBC4BB;
+	text-align: center;
+	padding: 5px;
+}
+#logo2{
+	margin: auto;
+	width: 500px;
+}
+.our-history{
+	width: 45%;
+	float: left;
+	padding: 20px;
+	border: solid #46767E;
+	box-sizing: content-box;
+	text-align: center;
+	background-image: url("../styles/images/wallpaper.jpeg");
+}
+.display{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-right: 20px;
+}
+table{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* About us Page */
+#about-us{
+	text-align: center;
+	line-height: 25px;
+}
+#group-pic{
+	width: 700px;
+}
+ul{
+	list-style-type: none;
+}
+dt{
+	font-weight: bold;
+}
+/* .about-header{
+	background-color: #46767E;
+	color: #EBC4BB;
+	border: solid #46767E;
+} */
+table, th, td{
+	border:solid #234247;
+	padding: 2px;
+}
+th{
+	background-color: #EBC4BB;
+	color: #46767E;
+	font-weight: bold;
+}
+.group-info::first-line{
+	background-color: #EBC4BB;
+	color: #46767E;
+}
+/* Grid Boxes for Application */
+fieldset{
+	border: 0
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1em;
+	padding-right: 205px;
+	padding-left: 205px;
+	padding-bottom: 50px;
+  }
+  
+  form {
+	display: contents;
+  }
+  
+  form > *:not(.buttons) {
+	background-color: #EBC4BB;
+	padding: 20px;
+	border: solid #46767E;
+  }
+  
+  .span-columns {
+	grid-column: span 2;
+  }
+  
+  .job-number {
+	text-align: center;
+  }
+  
+  .buttons {
+	display: flex;
+	justify-content: center;
+  }
+  .action{
+	background-color: #EBC4BB;
+	color: #46767E;
+  }
+  .action:hover{
+	background-color: #46767E;
+	color: #EBC4BB;
+  }
+  legend{
+	font-weight: bold;
+  }
+  fieldset{
+	text-align: center;
+  }
