@@ -54,7 +54,7 @@ if (!isset($_SESSION['manager'])) {
 <html>
 <head>
     <title>Manager Login</title>
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="../styles/login.css"> 
 </head>
 <body class="bg-light">
 <div class="container">

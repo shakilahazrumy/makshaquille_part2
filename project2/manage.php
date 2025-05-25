@@ -25,7 +25,7 @@ if (!isset($_SESSION['manager'])) {
 <html>
 <head>
     <title>Manage EOIs</title>
-    <link rel="stylesheet" href="manage.css"> 
+    <link rel="stylesheet" href="../styles/manage.css"> 
 </head>
 <body class="bg-light">
 <div class="container py-4">
