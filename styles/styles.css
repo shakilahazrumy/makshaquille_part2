@@ -12,6 +12,10 @@ body, html{
 *{
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+#background{
+	background-image: url("../styles/images/flower.jpeg");
+	background-size: cover;
+}
 /* Header and navigation css */
 
 header{
@@ -109,7 +113,6 @@ footer{
 	border: solid #46767E;
 	box-sizing: content-box;
 	text-align: center;
-	background-image: url("../styles/images/wallpaper.jpeg");
 }
 .display{
 	display: flex;

@@ -6,7 +6,7 @@
     <title>Home</title>  
     <link rel="stylesheet" type="text/css" href="../styles/styles.css"> <!-- Link to your CSS stylesheet -->  
 </head> 
-<body>
+<body id="background">
     <header>   
         <p>We would like to acknowledge that the logo used and the background picture used  in this page 
             was created by ChatGPT</p>  
