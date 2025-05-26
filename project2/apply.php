@@ -27,34 +27,34 @@
             </select>
 
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required />
+            <input type="text" id="firstName" name="firstName" required placeholder="Enter your First name"/>
 
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required />
+            <input type="text" id="lastName" name="lastName" required placeholder="Enter your Last name"/>
         </fieldset>
 
         <fieldset>
             <legend>Address</legend>
             <label for="street">Street Address</label>
-            <input type="text" id="street" name="street" required />
+            <input type="text" id="street" name="street" required placeholder="Enter your Street address"/>
 
             <label for="suburb">Suburb/Town</label>
-            <input type="text" id="suburb" name="suburb" required />
+            <input type="text" id="suburb" name="suburb" required placeholder="Enter your Suburb"/>
 
             <label for="state">State</label>
-            <input type="text" id="state" name="state" required />
+            <input type="text" id="state" name="state" required placeholder="Enter your State"/>
 
             <label for="postcode">Postcode</label>
-            <input type="text" id="postcode" name="postcode" required pattern="\d{4}" title="Please enter a 4-digit postcode" />
+            <input type="text" id="postcode" name="postcode" required pattern="\d{4}" title="Please enter a 4-digit postcode" placeholder="Please enter a 4 digit postcode" />
         </fieldset>
 
         <fieldset>
             <legend>Contact Info</legend>
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" required placeholder="Enter your email" />
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required pattern="[\d\s\-\+\(\)]+" title="Please enter a valid phone number" />
+            <input type="tel" id="phone" name="phone" required pattern="[\d\s\-\+\(\)]+" title="Please enter a valid phone number"  placeholder="Enter your phone number"/>
         </fieldset>
 
         <fieldset>
