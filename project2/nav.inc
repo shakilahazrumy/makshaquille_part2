@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="navbar-top">
-    <a href="index.html" class="logo-container">
+    <a href="./index.php" class="logo-container">
       <img src="../project2/images/logo.jpg" id="logo" alt="melbourne possums logo">
       <span class="company-name">Nexora</span>
     </a>
