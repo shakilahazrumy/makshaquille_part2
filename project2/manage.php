@@ -21,13 +21,19 @@ if (!isset($_SESSION['manager'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Manage EOIs</title>
-    <link rel="stylesheet" href="../styles/manage.css"> 
-</head>
-<body class="bg-light">
+<!DOCTYPE html>  
+<html lang="en">  
+<?php
+    include 'header.inc';
+?>  
+
+<body class="page-manage bg-light">
+     
+    <header> 
+      <p>We would like to acknowledge that the logo, key responsibilities, and qualifications used in this page 
+        was created and assisted by ChatGPT</p>  
+        <?php  include 'nav.inc';?>    
+    </header> 
 <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Welcome, <?php echo $_SESSION['manager']; ?></h2>
@@ -47,6 +53,16 @@ if (!isset($_SESSION['manager'])) {
         <form method="post" class="row g-3 mt-2">
             <div class="col-md-3"><input type="text" name="firstName" class="form-control" placeholder="First Name"></div>
             <div class="col-md-3"><input type="text" name="lastName" class="form-control" placeholder="Last Name"></div>
+           <div class="col-md-3">
+                <select name="sortBy" class="form-select">
+                    <option value="">Sort By</option>
+                    <option value="FirstName">First Name</option>
+                    <option value="LastName">Last Name</option>
+                    <option value="EOInumber">EOI Number</option>
+                    <option value="JobReferenceNumber">Job Ref</option>
+                    <option value="Status">Status</option>
+                </select>
+            </div>
             <div class="col-md-3">
                 <button type="submit" name="listByName" class="btn btn-outline-primary w-100">List EOIs by Name</button>
             </div>
@@ -108,16 +124,26 @@ if (!isset($_SESSION['manager'])) {
     }
 
     if (isset($_POST['listByName'])) {
-        if($_POST['firstName']){
-            $first = "%" . $_POST['firstName'] . "%";
+        $first = isset($_POST['firstName']) ? "%" . $_POST['firstName'] . "%" : "%";
+        $last = isset($_POST['lastName']) ? "%" . $_POST['lastName'] . "%" : "%";
+
+        // Define allowed columns for sorting
+        $allowedSortFields = ['FirstName', 'LastName', 'EOInumber', 'JobReferenceNumber', 'Status'];
+        $sortBy = isset($_POST['sortBy']) ? $_POST['sortBy'] : '';        
+        // Use default sort or validate user input
+        $orderClause = "";
+        if (in_array($sortBy, $allowedSortFields)) {
+            $orderClause = " ORDER BY $sortBy";
         }
-        if($_POST['lastName']){
-            $last = "%" . $_POST['lastName'] . "%";
-        }
-        $stmt = $conn->prepare("SELECT * FROM eoi WHERE FirstName LIKE ? OR LastName LIKE ?");
+
+        // Build full query
+        $query = "SELECT * FROM eoi WHERE FirstName LIKE ? OR LastName LIKE ?" . $orderClause;
+
+        $stmt = $conn->prepare($query);
         $stmt->bind_param("ss", $first, $last);
         $stmt->execute();
         $results = $stmt->get_result();
+        
         echo "<h5>EOIs for Applicant: " . htmlspecialchars($_POST['firstName']) . " " . htmlspecialchars($_POST['lastName']) . "</h5>";
         showResults($results);
         $stmt->close();
@@ -142,3 +168,8 @@ if (!isset($_SESSION['manager'])) {
 </div>
 </body>
 </html>
+
+
+<?php
+        include 'footer.inc';
+?>

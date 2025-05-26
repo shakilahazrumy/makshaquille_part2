@@ -1,6 +1,6 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>About Us - Mak Shaquille</title>  
-    <link rel="stylesheet" href="../styles/about.css">
-</head>
+    <title>Project 2 Website</title>  
+    <link rel="stylesheet" type="text/css" href="../project2/styles/styles.css"> 
+</head> 

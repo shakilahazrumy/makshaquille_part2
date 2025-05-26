@@ -1,14 +1,11 @@
 <!DOCTYPE html>  
 <html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Home</title>  
-    <link rel="stylesheet" type="text/css" href="../styles/about.css"> <!-- Link to your CSS stylesheet -->  
-</head> 
-<body>
-    <header>   
-        <p>We would like to acknowledge that the logo used and the background picture used  in this page 
+<?php
+    include 'header.inc';
+?>  
+<body class="page-general">
+    <header>  
+        <p>We would like to acknowledge that the logo used  in this page 
             was created by ChatGPT</p>  
             <?php
                 include 'nav.inc';
@@ -18,7 +15,7 @@
 
     <main id="about-us">  
         <h1 id="page-title">About Us</h1>
-        <img src="../images/group.jpg" id="group-pic" alt="group picture">
+        <img src="../project2/images/group.jpg" id="group-pic" alt="group picture">
         <p>in order, from left to right; Shakila, Pal, Mak, Denura</p>
         <div class="group-info"> 
             <h3 class="about-header">Group Information</h3>  
@@ -39,13 +36,13 @@
             <h3 class="about-header">Members Contributions</h3>  
             <dl>  
                 <dt>Mak(Software developer)</dt>  
-                <dd>Created the job application form.</dd>  
+                <dd>Created the jobs_db.php and connect_jobsdb.php.</dd>  
                 <dt>Pal patel(Product Owner)</dt>  
-                <dd>Created job descriptions.</dd>  
+                <dd>Created job descriptions, application page, and manager login page in manage.php.</dd>  
                 <dt>Denura(Software developer)</dt>  
-                <dd>Developed the About page and job application form</dd>
+                <dd>Developed the About page, settings.php and added ascending or descending order in manage.php</dd>
                 <dt>Shakila Hazrumy(Scrum Master)</dt>  
-                <dd>Developed the Home page and CSS styles.</dd>  
+                <dd>Developed the Home page, manage.php, register.php, and did the CSS styles for the mentioned files.</dd>  
             </dl>  
         </div>  
 

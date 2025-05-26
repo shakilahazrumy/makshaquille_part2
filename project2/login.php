@@ -50,14 +50,22 @@ if (isset($_POST['login'])) {
 // Show login form if not logged in
 if (!isset($_SESSION['manager'])) {
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Manager Login</title>
-    <link rel="stylesheet" href="../styles/login.css"> 
-</head>
-<body class="bg-light">
-<div class="container">
+
+
+<!DOCTYPE html>  
+<html lang="en">  
+<?php
+    include 'header.inc';
+?>  
+<header>  
+        <p>We would like to acknowledge that the logo used  in this page 
+            was created by ChatGPT</p>  
+            <?php
+                include 'nav.inc';
+             ?>   
+    </header>  
+<body class="page-login bg-light">
+<div class="container .page-login">
     <div class="card mx-auto shadow" style="max-width: 500px;">
         <div class="card-body">
             <h2 class="text-center mb-4">Manager Login</h2>
@@ -79,11 +87,16 @@ if (!isset($_SESSION['manager'])) {
         </div>
     </div>
 </div>
+<p></p>
 </body>
 </html>
+<?php
+        include 'footer.inc';
+    ?>
 <?php
     exit();
 }else{
      header("Location: manage.php");
 }
 ?>
+

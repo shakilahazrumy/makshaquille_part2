@@ -43,21 +43,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Manager Registration</title>
-    <link rel="stylesheet" href="../styles/login.css"> 
-</head>
+<!DOCTYPE html>  
+<html lang="en">  
+<?php
+    include 'header.inc';
+?>  
 
-<body class="bg-light">
+
+<body class="page-login bg-light ">
+    <?php
+ include 'nav.inc';
+?>  
 <div class="container">
     <div class="card mx-auto" style="max-width: 500px;">
         <div class="card-body">
             <h2 class="card-title mb-4 text-center">Manager Registration</h2>
            <?php if (isset($registrationError)) echo "<div class='alert alert-danger'>$registrationError</div>"; ?>
            <?php if (isset($registrationSuccess)) echo "<div class='alert alert-success'>$registrationSuccess</div>"; ?>
-            <form method="post" action="">
+            <form method="post" action="" class="form-control">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username:</label>
                     <input type="text" name="username" id="username" class="form-control" required>
@@ -79,3 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 </body>
 </html>
+
+<?php
+        include 'footer.inc';
+    ?>

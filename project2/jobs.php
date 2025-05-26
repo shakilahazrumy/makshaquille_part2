@@ -1,13 +1,10 @@
 <!DOCTYPE html>  
 <html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>IT Job Opportunities</title>   
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css"> <!-- Link to your CSS stylesheet -->  
-</head> 
+<?php
+    include 'header.inc';
+?>  
 
-<body>
+<body class="page-general">
     <!--Page Header-->
     <header> 
       <p>We would like to acknowledge that the logo, key responsibilities, and qualifications used in this page 
@@ -133,9 +130,7 @@
 
           <!--Bottom of the page, standard Websire stuff-->
 
-        <footer>  
-          <p>&copy; 2025 Mak Shaquille | <a href="https://palpatelsocials-1744514398565.atlassian.net/jira/software/projects/SCRUM/boards/1">Our Jira Page</a></p>   
-        </footer> 
+ 
 
 
 
@@ -144,3 +139,4 @@
     </main>      <!--I would like to acknowledge the assistance of ChatGPT in helping me articulate the key responsibilities and qualifications for the job description.-->
  </body>
 </html>
+<?php include('footer.inc'); ?>

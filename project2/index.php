@@ -1,12 +1,10 @@
 <!DOCTYPE html>  
 <html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Home</title>  
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css"> <!-- Link to your CSS stylesheet -->  
-</head> 
-<body id="background">
+<?php
+    include 'header.inc';
+?>  
+
+<body id="background" class="page-general">
     <header>   
         <p>We would like to acknowledge that the logo used and the background picture used  in this page 
             was created by ChatGPT</p>  
@@ -17,7 +15,7 @@
     <main>
         <h1 id="page-title">About Melbourne Possums Apparell</h1>
         <div class="display">
-                <img src="../images/logo2.jpg" id="logo2" alt="Melbourne Possums Logo2">
+                <img src="../project2/images/logoindex.png" id="logo2" alt="Melbourne Possums Logo2">
             <p class="our-history">
                 Formed in 2015, Nexora is the #1 IT Company in Australia. With a focus on climate change, our cutting edge technology thrives on 
                 pushing the digital transformation while reducing our carbon footprint. Our services include; software development, IT Infrastructure & Cloud Services, 
