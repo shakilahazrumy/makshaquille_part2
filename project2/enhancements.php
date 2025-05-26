@@ -24,9 +24,9 @@ $enhancements = [
         table using prepared statements.",
     ],
     [
-        "title" => "2. Header and Navigation Styling",
-        "description" => "Applies color schemes and alignment to the header and makes hyperlinks interactive with hover effects.",
-        "code" => "#header {\n    text-align: right;\n    color: #EBC4BB;\n    background-color: #46767E;\n}\na:hover {\n    color: #46767E;\n    background-color: #EBC4BB;\n}"
+        "title" => "2. Allowed managers to view EOIs based on what order they'd want",
+        "code" => "On top of allowing managers to look through the database based on what information they have. Managers have the option to list
+        the EOIs based on their preference. The drop list allows managers to list it based on first name, last name, EOI number, job reference number, and status"
 
     ],
     
