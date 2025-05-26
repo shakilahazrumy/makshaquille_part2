@@ -25,7 +25,7 @@
                 from custom application design to enterprise job management systems. O
                 ur core services include software development, application deployment, IT infrastructure & cloud services, cybersecurity, 
                 AI integration, and tailored business applications. With a focus on digital transformation and sustainable technology, 
-                we deliver cutting-edge software solutions that meet your evolving business needs while reducing environmental impact.
+                we deliver cutting-edge software solutions that meet your evolving business needs while reducing environmental impact.!
                 <br><br>
                 With our core values on our sleeves, we will strive to innovate, integrate, elevate.  
                 <br><br>
