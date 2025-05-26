@@ -2,60 +2,50 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Database connection
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "Job_Application";
+require_once 'settings.php';
 
-$conn = new mysqli($host, $user, $password, $database);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+?>
+<!DOCTYPE html>  
+<html lang="en">  
+<?php
+    include 'header.inc';
+?>  
+<body class="page-general enhancement">
+    
+ <header>   
+        <header>
+    <h1>Process EOI</h1>
+            <?php
+                include 'nav.inc';
+             ?>   
+    </header>  
 
+<?php
 function clean_input($data) {
     return htmlspecialchars(stripslashes(trim($data)));
 }
 
-// Collect and clean inputs
 $jobReferenceNumber = isset($_POST['jobRef']) ? clean_input($_POST['jobRef']) : '';
-
-// First name: max 20 alpha chars
 $firstName = isset($_POST['firstName']) ? clean_input($_POST['firstName']) : '';
-if (!preg_match('/^[a-zA-Z]{1,20}$/', $firstName)) {
-    die("First name must be 1-20 alphabetic characters only.");
-}
-
-// Last name: max 20 alpha chars
 $lastName = isset($_POST['lastName']) ? clean_input($_POST['lastName']) : '';
-if (!preg_match('/^[a-zA-Z]{1,20}$/', $lastName)) {
-    die("Last name must be 1-20 alphabetic characters only.");
-}
-
-// Street address max 40 chars
 $streetAddress = isset($_POST['street']) ? clean_input($_POST['street']) : '';
-if (strlen($streetAddress) > 40) {
-    die("Street address must be 40 characters or fewer.");
-}
-
-// Suburb/town max 40 chars
 $suburbTown = isset($_POST['suburb']) ? clean_input($_POST['suburb']) : '';
-if (strlen($suburbTown) > 40) {
-    die("Suburb/town must be 40 characters or fewer.");
-}
-
-// State VIC,NSW,QLD,NT,WA,SA,TAS,ACT validation
 $state = isset($_POST['state']) ? strtoupper(clean_input($_POST['state'])) : '';
-$validStates = ["VIC", "NSW", "QLD", "NT", "WA", "SA", "TAS", "ACT"];
-if (!in_array($state, $validStates)) {
-    die("Invalid state selected.");
-}
-
-// Postcode exactly 4 digits and matches state
 $postcode = isset($_POST['postcode']) ? clean_input($_POST['postcode']) : '';
-if (!preg_match('/^\d{4}$/', $postcode)) {
-    die("Postcode must be exactly 4 digits.");
-}
+$emailAddress = isset($_POST['email']) ? clean_input($_POST['email']) : '';
+$phoneNumber = isset($_POST['phone']) ? clean_input($_POST['phone']) : '';
+
+// Skills - check if selected in skills[] array
+$skills = isset($_POST['skills']) ? $_POST['skills'] : [];
+$html = in_array('HTML', $skills) ? "Yes" : NULL;
+$css = in_array('CSS', $skills) ? "Yes" : NULL;
+$javaScript = in_array('JavaScript', $skills) ? "Yes" : NULL;
+$python = in_array('Python', $skills) ? "Yes" : NULL;
+
+// Other skills only if user typed something
+$otherSkills = (isset($_POST['otherSkills']) && !empty(trim($_POST['otherSkills']))) ? clean_input($_POST['otherSkills']) : NULL;
+
+// State and postcode validation
 $statePostcodeStart = [
     "VIC" => ["3"],
     "NSW" => ["1", "2"],
@@ -66,35 +56,22 @@ $statePostcodeStart = [
     "TAS" => ["7"],
     "ACT" => ["0"]
 ];
+
+if (empty($state) || empty($postcode)) {
+    die("State and postcode are required.");
+}
+
+if (!array_key_exists($state, $statePostcodeStart)) {
+    die("Invalid state selected.");
+}
+
+if (!preg_match('/^\d{4}$/', $postcode)) {
+    die("Postcode must be exactly 4 digits.");
+}
+
 $postcodeStart = substr($postcode, 0, 1);
 if (!in_array($postcodeStart, $statePostcodeStart[$state])) {
     die("Postcode does not match the selected state.");
-}
-
-// Email address validate format
-$emailAddress = isset($_POST['email']) ? clean_input($_POST['email']) : '';
-if (!filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
-    die("Invalid email address format.");
-}
-
-// Phone number 8 to 12 digits or spaces
-$phoneNumber = isset($_POST['phone']) ? clean_input($_POST['phone']) : '';
-if (!preg_match('/^[0-9 ]{8,12}$/', $phoneNumber)) {
-    die("Phone number must be 8 to 12 digits or spaces only.");
-}
-
-// Skills - checkbox inputs
-$skills = isset($_POST['skills']) ? $_POST['skills'] : [];
-$html = in_array('HTML', $skills) ? "Yes" : NULL;
-$css = in_array('CSS', $skills) ? "Yes" : NULL;
-$javaScript = in_array('JavaScript', $skills) ? "Yes" : NULL;
-$python = in_array('Python', $skills) ? "Yes" : NULL;
-
-// Other skills - if checkbox selected (assume checkbox named 'otherSkillsCheckbox'), text must not be empty
-$otherSkillsCheckbox = isset($_POST['otherSkillsCheckbox']) ? true : false;
-$otherSkills = (isset($_POST['otherSkills']) && !empty(trim($_POST['otherSkills']))) ? clean_input($_POST['otherSkills']) : NULL;
-if ($otherSkillsCheckbox && empty($otherSkills)) {
-    die("Please specify your other skills if the 'Other skills' checkbox is selected.");
 }
 
 $sql = "INSERT INTO eoi 
@@ -132,8 +109,13 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
-
-// i would like to Acknowledge the use of ChatGPT assistance
-echo "<p><em>Code assisted by ChatGPT.</em></p>";
+// i would like to acknowldge the use of CHAT GPT 
+// in order to assist me in finising this task
 ?>
 
+
+
+</body>
+</html>
+
+<?php include('footer.inc'); ?>
