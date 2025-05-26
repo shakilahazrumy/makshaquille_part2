@@ -117,6 +117,15 @@
                 </li>
             </ol>
           </div>
+
+          <div>
+          <a href="apply.php" id="applyBtn">
+          Apply Now
+          </a>
+
+          </div>
+
+
         </section>
 
 
