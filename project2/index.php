@@ -13,7 +13,7 @@
              ?>   
     </header>  
     <main>
-        <h1 id="page-title">About Melbourne Possums Apparell</h1>
+        <h1 id="page-title">About Nexora</h1>
         <div class="display">
                 <img src="../project2/images/logoindex.png" id="logo2" alt="Melbourne Possums Logo2">
             <p class="our-history">
