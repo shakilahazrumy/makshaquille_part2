@@ -19,8 +19,9 @@
 $enhancements = [
     [
         "title" => "1. Create manager registration page",
-        "description" => "This section removes default spacing in browsers and applies a consistent serif font to all text elements.",
-        "code" => " space for code"
+        "code" => "The register.php file handles manager account creation by validating 
+        username and password requirements, securely hashing the password, and storing the information in the existing 'manager' table inside the 'Job_Application' database 
+        table using prepared statements.",
     ],
     [
         "title" => "2. Header and Navigation Styling",

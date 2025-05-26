@@ -16,12 +16,23 @@
         <h1 id="page-title">About Nexora</h1>
         <div class="display">
                 <img src="../project2/images/logoindex.png" id="logo2" alt="Melbourne Possums Logo2">
-            <p class="our-history">
-                Formed in 2015, Nexora is the #1 IT Company in Australia. With a focus on climate change, our cutting edge technology thrives on 
-                pushing the digital transformation while reducing our carbon footprint. Our services include; software development, IT Infrastructure & Cloud Services, 
-                cybersecurity, AI, and many more for your business needs. 
+
+
+                <!-- The keywords used are not relevant to the company. Keywords should reflect the core services, 
+                 products, or themes of the business to improve search engine rankings. (Jobs, application, Software) -->
+                <p class="our-history">
+                Formed in 2015, Nexora is the #1 IT Company in Australia. We specialize in comprehensive software development solutions, 
+                from custom application design to enterprise job management systems. O
+                ur core services include software development, application deployment, IT infrastructure & cloud services, cybersecurity, 
+                AI integration, and tailored business applications. With a focus on digital transformation and sustainable technology, 
+                we deliver cutting-edge software solutions that meet your evolving business needs while reducing environmental impact.
                 <br><br>
                 With our core values on our sleeves, we will strive to innovate, integrate, elevate.  
+                <br><br>
+                We are currently looking for a Cloud Engineer and Cyber Security Specialist. If you believe in the same things we do,
+                head to our <a href="./jobs.php" class="reference">job opportunities page</a> to look at more details!
+                <br><br>
+                Confident you're the person we're looking for? head on to our <a href="apply.php">job application page</a> and apply!
                 <br><br>
                 For any assistance, please contact us at <strong>info@nexora.com.au</strong>
             </p>
