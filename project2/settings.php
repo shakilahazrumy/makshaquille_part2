@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "job_application";
+$database = "makshaquille_part2";
 
 $conn = new mysqli($host, $user, $password, $database);
 

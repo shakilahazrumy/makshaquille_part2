@@ -113,6 +113,7 @@ if (!isset($_SESSION['manager'])) {
     }
 
     // Logic handling
+    // list EOI by job reference input
     if (isset($_POST['listByJob']) && !empty($_POST['jobRef'])) {
         $stmt = $conn->prepare("SELECT * FROM eoi WHERE JobReferenceNumber = ?");
         $stmt->bind_param("s", $_POST['jobRef']);
@@ -122,7 +123,7 @@ if (!isset($_SESSION['manager'])) {
         showResults($results);
         $stmt->close();
     }
-
+    // list EOI by name input
     if (isset($_POST['listByName'])) {
         $first = isset($_POST['firstName']) ? "%" . $_POST['firstName'] . "%" : "%";
         $last = isset($_POST['lastName']) ? "%" . $_POST['lastName'] . "%" : "%";
@@ -148,7 +149,7 @@ if (!isset($_SESSION['manager'])) {
         showResults($results);
         $stmt->close();
     }
-
+    //delete EOIs by job reference input
     if (isset($_POST['deleteByJob']) && !empty($_POST['deleteJobRef'])) {
         $stmt = $conn->prepare("DELETE FROM eoi WHERE JobReferenceNumber = ?");
         $stmt->bind_param("s", $_POST['deleteJobRef']);
@@ -156,7 +157,7 @@ if (!isset($_SESSION['manager'])) {
         echo "<div class='alert alert-success'>Deleted EOIs for job reference: " . htmlspecialchars($_POST['deleteJobRef']) . "</div>";
         $stmt->close();
     }
-
+    // update status of applicant
     if (isset($_POST['updateStatus']) && !empty($_POST['eoiNumber']) && !empty($_POST['newStatus'])) {
         $stmt = $conn->prepare("UPDATE eoi SET Status = ? WHERE EOInumber = ?");
         $stmt->bind_param("si", $_POST['newStatus'], $_POST['eoiNumber']);
