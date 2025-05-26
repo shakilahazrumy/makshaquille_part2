@@ -194,7 +194,11 @@
 .page-general dt{
 	font-weight: bold;
 }
-
+/* .about-header{
+	background-color: #46767E;
+	color: #EBC4BB;
+	border: solid #46767E;
+} */
 
 .page-general th{
 	background-color: #EBC4BB;
