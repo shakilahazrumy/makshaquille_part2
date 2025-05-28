@@ -45,7 +45,7 @@
             </p>
         </section>
     </main>
-    <p><a href="https://pin.it/7Bv6LUTmo">Source of Background Image</a></p>
+    <p><a href="https://pin.it/7xhbk3UNS">Source of Background Image</a></p>
     <footer>  
         <p>&copy; 2025 Mak Shaquille | <a href="https://palpatelsocials-1744514398565.atlassian.net/jira/software/projects/SCRUM/boards/1">Our Jira Page</a></p>  
     </footer> 
