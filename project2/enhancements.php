@@ -7,8 +7,6 @@
     
  <header>   
         <header>
-        <p>We would like to acknowledge that the logo used  in this page 
-        was created by ChatGPT</p>
             <?php
                 include 'nav.inc';
              ?>   

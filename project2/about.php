@@ -4,9 +4,7 @@
     include 'header.inc';
 ?>  
 <body class="page-general">
-    <header>  
-        <p>We would like to acknowledge that the logo used  in this page 
-            was created by ChatGPT</p>  
+    <header>    
             <?php
                 include 'nav.inc';
              ?>   
