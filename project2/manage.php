@@ -29,9 +29,7 @@ if (!isset($_SESSION['manager'])) {
 
 <body class="page-manage bg-light">
      
-    <header> 
-      <p>We would like to acknowledge that the logo, key responsibilities, and qualifications used in this page 
-        was created and assisted by ChatGPT</p>  
+    <header>  
         <?php  include 'nav.inc';?>    
     </header> 
 <div class="container py-4">

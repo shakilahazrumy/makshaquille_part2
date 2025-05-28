@@ -6,8 +6,6 @@
 
 <body class="page-general">
     <header>   
-        <p>We would like to acknowledge that the logo, key responsibilities, and qualifications used on this 
-            page were created and assisted by ChatGPT.</p>  
         <?php include 'nav.inc'; ?>   
     </header>  
     
