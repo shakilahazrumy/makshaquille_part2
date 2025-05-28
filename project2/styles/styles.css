@@ -257,7 +257,7 @@
 }
 
 .page-general li {
-  float: left;
+  float: none;
 }
 
 .page-general li a {
@@ -951,4 +951,44 @@ table td {
 
 #applyBtn:hover {
   background-color: #355a5f; 
+}
+
+.job-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 40px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.job-listings {
+    flex: 1 1 75%;
+}
+
+.why-it-matters {
+    flex: 0 0 300px;
+    padding: 20px;
+    border: 1px solid #46767E;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 46px;
+}
+
+.job-title {
+    background-color: #e8b4b8;
+    color: #2e5e5e;
+    font-weight: bold;
+    padding: 12px 40px;
+    margin: 0;
+    font-size: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.job-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-left: 0;
 }
