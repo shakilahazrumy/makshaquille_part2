@@ -141,6 +141,42 @@ ALTER TABLE `managers`
   MODIFY `ManagerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs_database`
+--
+
+CREATE TABLE `jobs_database` (
+  `job_ref` varchar(10) NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `salary_range` varchar(50) DEFAULT NULL,
+  `reports_to` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `key_responsibilities` text DEFAULT NULL,
+  `education` text DEFAULT NULL,
+  `experience` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `jobs_database`
+--
+
+INSERT INTO `jobs_database` (`job_ref`, `title`, `salary_range`, `reports_to`, `description`, `key_responsibilities`, `education`, `experience`) VALUES
+('G04C1', 'Cloud Engineer', '$105,000 - $120,000', 'Lead Cloud Infrastructure Engineer', 'The Cloud Engineer will be responsible for designing, implementing, and maintaining cloud-based infrastructure and services.\r\nThe role includes collaborating with cross-functional teams to understand infrastructure needs, automating deployments, and ensuring security, scalability, and performance of cloud environments. This position requires strong problem-solving skills and the ability to work in a dynamic team environment.\r\n', 'Design, implement, and manage cloud infrastructure and services. Collaborate with cross-functional teams to gather and analyze infrastructure requirements. Develop and maintain Infrastructure as Code (IaC) using tools such as Terraform or CloudFormation. Monitor and optimize cloud resources for performance and cost- efficiency. Troubleshoot and resolve cloud-related issues, ensuring high availability and reliability. Stay up to date with new cloud technologies and industry best practices to improve infrastructure management.', 'Bachelor\'s degree in Computer Science, Information Technology, or related field|Relevant certifications in cloud technologies (e.g., AWS Certified Solutions Architect, Microsoft Azure Administrator, Google Cloud Professional) are a plus|Master’s degree in Cloud Computing, Computer Science, or a related field (preferred but not required)\r\n', 'Minimum of 3 years of experience in cloud engineering or infrastructure management| Experience with cloud platforms (e.g., AWS, Azure, Google Cloud). Experience with Infrastructure as Code (e.g., Terraform, CloudFormation)|Knowledge of networking, security, and cloud monitoring tools|Proven track record of deploying, monitoring, and optimizing cloud infrastructure'),
+('G04X7', 'Cyber Security Specialist', '$90,000 - $120,000', 'Chief Information Security Officer (CISO)', 'The Cybersecurity Specialist will be responsible for protecting the organization\'s networks, systems, and data from security breaches, cyber-attacks, and other threats. This role requires identifying vulnerabilities, implementing security measures, and monitoring network traffic to prevent unauthorized access. The specialist will also work to ensure compliance with security standards and best practices while collaborating with IT teams to improve the organization\'s overall cybersecurity.', 'Develop and implement security measures to protect the organization\'s IT infrastructure. Conduct regular security assessments and vulnerability testing on networks, applications, and systems. Monitor security systems and network traffic to identify potential threats or breaches. Stay current with the latest security trends, vulnerabilities, and emerging technologies to protect systems from new threats. Conduct employee training on cybersecurity awareness and safe practices. Collaborate with internal teams to ensure adherence to cybersecurity policies and best practices.', 'Bachelor’s degree in Cybersecurity, Information Technology, or a related field|Professional certifications in cybersecurity (e.g., CISSP, CISM, CompTIA Security+) are preferred|Master’s degree in a relevant field or specialized certifications (e.g., Certified Ethical Hacker (CEH), Certified Information Security Manager (CISM)) is a plus\r\n', 'Minimum of 3 years of professional experience in cybersecurity or information security|Proven experience in implementing and managing security tools, such as firewalls, antivirus software, and intrusion detection systems (IDS)| Experience with compliance frameworks such as ISO 27001, NIST, GDPR, or HIPAA is highly desirable|Familiarity with network protocols, encryption techniques, and security policies|Experience in analyzing security risks and incidents, and developing strategies to mitigate them\r\n');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `jobs_database`
+--
+ALTER TABLE `jobs_database`
+  ADD PRIMARY KEY (`job_ref`);
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
